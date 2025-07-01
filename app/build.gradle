@@ -33,7 +33,7 @@ if (keystorePropertiesFile.exists()) {
 }
 
 android {
-    compileSdkVersion 34
+    compileSdkVersion 31
      namespace 'com.litekite.systemui'
     defaultConfig {
         applicationId "com.litekite.systemui"
@@ -101,6 +101,9 @@ android {
 
 kapt {
     correctErrorTypes true
+    javacOptions {
+        option("-Xmaxerrs", 1000)
+    }
      javacOptions {
         option("--add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED")
         option("--add-exports=jdk.compiler/com.sun.tools.javac.file=ALL-UNNAMED")
