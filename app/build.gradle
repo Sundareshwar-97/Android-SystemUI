@@ -94,7 +94,7 @@ android {
             } else {
                 println "No keystore.properties found. Release build will be unsigned."
             }
-        }`
+        }
     }
 }
 
