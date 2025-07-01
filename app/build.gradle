@@ -59,6 +59,10 @@ android {
         main.java.srcDirs += "src/main/kotlin"
         androidTest.assets.srcDirs += files("$projectDir/schemas".toString())
     }
+    packagingOptions {
+        exclude 'META-INF/atomicfu.kotlin_module'
+        exclude 'META-INF/gradle/incremental.annotation.processors'
+    }
     buildFeatures {
         viewBinding = true
         dataBinding = true
@@ -102,8 +106,9 @@ android {
 kapt {
     correctErrorTypes true
     javacOptions {
+        option("-Xmaxerrs", 1000)
         option("--add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED")
-        option("--add-exports=jdk.compiler/com.sun.tools.javac.file=ALL-UNNAMED") 
+        option("--add-exports=jdk.compiler/com.sun.tools.javac.file=ALL-UNNAMED")
         option("--add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED")
     }
 }
