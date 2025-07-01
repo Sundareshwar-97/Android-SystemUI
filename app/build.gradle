@@ -106,10 +106,9 @@ android {
 kapt {
     correctErrorTypes true
     javacOptions {
-        option("-Xmaxerrs", 1000)
-        option("--add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED")
-        option("--add-exports=jdk.compiler/com.sun.tools.javac.file=ALL-UNNAMED")
-        option("--add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED")
+        option("-source", "8")
+        option("-target", "8")
+        option("-Xmaxerrs", 500)
     }
 }
 
