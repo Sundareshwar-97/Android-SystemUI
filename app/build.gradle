@@ -33,7 +33,7 @@ if (keystorePropertiesFile.exists()) {
 }
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 34
      namespace 'com.litekite.systemui'
     defaultConfig {
         applicationId "com.litekite.systemui"
@@ -120,7 +120,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation "androidx.datastore:datastore-preferences:1.0.0-beta01"
-    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
 
     // Widgets library
     implementation 'com.github.litekite:android-widgets:0.0.7'
@@ -130,8 +130,8 @@ dependencies {
     implementation "androidx.fragment:fragment-ktx:1.2.5"
 
     // Lifecycle KTX
-    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.6.2"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2"
     kapt "androidx.lifecycle:lifecycle-common-java8:$lifecycle_version"
 
     // Room
